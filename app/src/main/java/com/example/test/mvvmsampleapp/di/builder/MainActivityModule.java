@@ -1,4 +1,4 @@
-package com.example.test.mvvmsampleapp.di;
+package com.example.test.mvvmsampleapp.di.builder;
 
 import com.example.test.mvvmsampleapp.view.ui.MainActivity;
 

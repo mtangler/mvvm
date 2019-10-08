@@ -1,4 +1,4 @@
-package com.example.test.mvvmsampleapp.view.ui;
+package com.example.test.mvvmsampleapp.view.ui.projects_list;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -6,12 +6,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.test.mvvmsampleapp.R;
+import com.example.test.mvvmsampleapp.data.model.Project;
 import com.example.test.mvvmsampleapp.databinding.FragmentProjectListBinding;
-import com.example.test.mvvmsampleapp.di.Injectable;
-import com.example.test.mvvmsampleapp.service.model.Project;
+import com.example.test.mvvmsampleapp.di.helper.Injectable;
 import com.example.test.mvvmsampleapp.view.adapter.ProjectAdapter;
 import com.example.test.mvvmsampleapp.view.callback.ProjectClickCallback;
-import com.example.test.mvvmsampleapp.viewmodel.ProjectListViewModel;
+import com.example.test.mvvmsampleapp.view.ui.MainActivity;
 
 import java.util.List;
 
@@ -36,7 +36,7 @@ public class ProjectListFragment extends Fragment implements Injectable {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
-            @Nullable Bundle savedInstanceState) {
+                             @Nullable Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_project_list, container, false);
 
         projectAdapter = new ProjectAdapter(projectClickCallback);

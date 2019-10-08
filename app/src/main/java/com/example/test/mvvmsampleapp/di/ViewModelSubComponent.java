@@ -1,14 +1,15 @@
 package com.example.test.mvvmsampleapp.di;
 
-import com.example.test.mvvmsampleapp.viewmodel.ComicsViewModel;
-import com.example.test.mvvmsampleapp.viewmodel.ProjectListViewModel;
-import com.example.test.mvvmsampleapp.viewmodel.ProjectViewModel;
+import com.example.test.mvvmsampleapp.ViewModelProviderFactory;
+import com.example.test.mvvmsampleapp.view.ui.comics.ComicsViewModel;
+import com.example.test.mvvmsampleapp.view.ui.projects.ProjectViewModel;
+import com.example.test.mvvmsampleapp.view.ui.projects_list.ProjectListViewModel;
 
 import dagger.Subcomponent;
 
 /**
  * A sub component to create ViewModels. It is called by the
- * {@link com.example.test.mvvmsampleapp.viewmodel.ProjectViewModelFactory}.
+ * {@link ViewModelProviderFactory}.
  */
 @Subcomponent
 public interface ViewModelSubComponent {
@@ -18,6 +19,8 @@ public interface ViewModelSubComponent {
     }
 
     ProjectListViewModel projectListViewModel();
+
     ProjectViewModel projectViewModel();
+
     ComicsViewModel comicsViewModel();
 }

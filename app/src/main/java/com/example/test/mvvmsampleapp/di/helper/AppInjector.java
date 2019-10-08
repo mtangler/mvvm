@@ -1,10 +1,11 @@
-package com.example.test.mvvmsampleapp.di;
+package com.example.test.mvvmsampleapp.di.helper;
 
 import android.app.Activity;
 import android.app.Application;
 import android.os.Bundle;
 
 import com.example.test.mvvmsampleapp.MVVMApplication;
+import com.example.test.mvvmsampleapp.di.DaggerAppComponent;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
@@ -17,7 +18,8 @@ import dagger.android.support.HasSupportFragmentInjector;
  * AppInjector is a helper class to automatically inject fragments if they implement {@link Injectable}.
  */
 public class AppInjector {
-    private AppInjector() {}
+    private AppInjector() {
+    }
 
     public static void init(MVVMApplication mvvmApplication) {
         DaggerAppComponent.builder().application(mvvmApplication)

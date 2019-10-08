@@ -1,4 +1,4 @@
-package com.example.test.mvvmsampleapp.di;
+package com.example.test.mvvmsampleapp.di.helper;
 
 /**
  * Marker interface for fragments.

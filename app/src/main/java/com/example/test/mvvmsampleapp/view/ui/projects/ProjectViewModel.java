@@ -1,10 +1,10 @@
-package com.example.test.mvvmsampleapp.viewmodel;
+package com.example.test.mvvmsampleapp.view.ui.projects;
 
 import android.app.Application;
 import android.util.Log;
 
-import com.example.test.mvvmsampleapp.service.model.Project;
-import com.example.test.mvvmsampleapp.service.repository.ProjectRepository;
+import com.example.test.mvvmsampleapp.data.model.Project;
+import com.example.test.mvvmsampleapp.data.remote.repo.ProjectRepository;
 
 import javax.inject.Inject;
 
@@ -18,6 +18,7 @@ import androidx.lifecycle.Transformations;
 public class ProjectViewModel extends AndroidViewModel {
     private static final String TAG = ProjectViewModel.class.getName();
     private static final MutableLiveData ABSENT = new MutableLiveData();
+
     {
         //noinspection unchecked
         ABSENT.setValue(null);
@@ -40,7 +41,7 @@ public class ProjectViewModel extends AndroidViewModel {
                 return ABSENT;
             }
 
-            Log.i(TAG,"ProjectViewModel projectID is " + projectID.getValue());
+            Log.i(TAG, "ProjectViewModel projectID is " + projectID.getValue());
 
             return projectRepository.getProjectDetails("Google", projectID.getValue());
         });

@@ -5,7 +5,7 @@
 
     <data>
         <variable name="isLoading" type="boolean" />
-        <variable name="projectViewModel" type="com.example.test.mvvmsampleapp.viewmodel.ProjectViewModel"/>
+        <variable name="projectViewModel" type="com.example.test.mvvmsampleapp.view.ui.projects.ProjectViewModel"/>
     </data>
 
     <FrameLayout

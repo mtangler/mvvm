@@ -1,4 +1,4 @@
-package com.example.test.mvvmsampleapp.service.model;
+package com.example.test.mvvmsampleapp.data.model;
 
 import java.util.Date;
 

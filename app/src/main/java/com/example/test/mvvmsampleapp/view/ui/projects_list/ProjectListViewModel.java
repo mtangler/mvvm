@@ -1,16 +1,17 @@
-package com.example.test.mvvmsampleapp.viewmodel;
+package com.example.test.mvvmsampleapp.view.ui.projects_list;
 
 import android.app.Application;
-import androidx.lifecycle.AndroidViewModel;
-import androidx.lifecycle.LiveData;
-import androidx.annotation.NonNull;
 
-import com.example.test.mvvmsampleapp.service.model.Project;
-import com.example.test.mvvmsampleapp.service.repository.ProjectRepository;
+import com.example.test.mvvmsampleapp.data.model.Project;
+import com.example.test.mvvmsampleapp.data.remote.repo.ProjectRepository;
 
 import java.util.List;
 
 import javax.inject.Inject;
+
+import androidx.annotation.NonNull;
+import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.LiveData;
 
 public class ProjectListViewModel extends AndroidViewModel {
     private final LiveData<List<Project>> projectListObservable;

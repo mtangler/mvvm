@@ -1,4 +1,4 @@
-package com.example.test.mvvmsampleapp.view.ui;
+package com.example.test.mvvmsampleapp.view.ui.projects;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -6,10 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.test.mvvmsampleapp.R;
+import com.example.test.mvvmsampleapp.data.model.Project;
 import com.example.test.mvvmsampleapp.databinding.FragmentProjectDetailsBinding;
-import com.example.test.mvvmsampleapp.di.Injectable;
-import com.example.test.mvvmsampleapp.service.model.Project;
-import com.example.test.mvvmsampleapp.viewmodel.ProjectViewModel;
+import com.example.test.mvvmsampleapp.di.helper.Injectable;
 
 import javax.inject.Inject;
 
@@ -31,7 +30,7 @@ public class ProjectFragment extends Fragment implements Injectable {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
-            @Nullable Bundle savedInstanceState) {
+                             @Nullable Bundle savedInstanceState) {
         // Inflate this data binding layout
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_project_details, container, false);
 
@@ -67,7 +66,9 @@ public class ProjectFragment extends Fragment implements Injectable {
         });
     }
 
-    /** Creates project fragment for specific project ID */
+    /**
+     * Creates project fragment for specific project ID
+     */
     public static ProjectFragment forProject(String projectID) {
         ProjectFragment fragment = new ProjectFragment();
         Bundle args = new Bundle();

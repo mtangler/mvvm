@@ -1,7 +1,7 @@
 package com.example.test.mvvmsampleapp.di;
 
-import com.example.test.mvvmsampleapp.service.repository.GitHubService;
-import com.example.test.mvvmsampleapp.viewmodel.ProjectViewModelFactory;
+import com.example.test.mvvmsampleapp.ViewModelProviderFactory;
+import com.example.test.mvvmsampleapp.data.remote.repo.GitHubService;
 
 import javax.inject.Singleton;
 
@@ -12,8 +12,9 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 @Module(subcomponents = ViewModelSubComponent.class)
-class AppModule {
-    @Singleton @Provides
+public class AppModule {
+    @Singleton
+    @Provides
     GitHubService provideGithubService() {
         return new Retrofit.Builder()
                 .baseUrl(GitHubService.HTTPS_API_GITHUB_URL)
@@ -27,6 +28,6 @@ class AppModule {
     ViewModelProvider.Factory provideViewModelFactory(
             ViewModelSubComponent.Builder viewModelSubComponent) {
 
-        return new ProjectViewModelFactory(viewModelSubComponent.build());
+        return new ViewModelProviderFactory(viewModelSubComponent.build());
     }
 }

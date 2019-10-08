@@ -3,7 +3,7 @@ package com.example.test.mvvmsampleapp;
 import android.app.Activity;
 import android.app.Application;
 
-import com.example.test.mvvmsampleapp.di.AppInjector;
+import com.example.test.mvvmsampleapp.di.helper.AppInjector;
 
 import javax.inject.Inject;
 

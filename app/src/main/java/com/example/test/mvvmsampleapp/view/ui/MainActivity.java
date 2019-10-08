@@ -3,8 +3,9 @@ package com.example.test.mvvmsampleapp.view.ui;
 import android.os.Bundle;
 
 import com.example.test.mvvmsampleapp.R;
-import com.example.test.mvvmsampleapp.service.model.Comics;
-import com.example.test.mvvmsampleapp.service.model.Project;
+import com.example.test.mvvmsampleapp.data.model.Project;
+import com.example.test.mvvmsampleapp.view.ui.comics.ComicsFragment;
+import com.example.test.mvvmsampleapp.view.ui.projects.ProjectFragment;
 
 import javax.inject.Inject;
 

@@ -1,12 +1,8 @@
-package com.example.test.mvvmsampleapp.viewmodel;
+package com.example.test.mvvmsampleapp.view.ui.comics;
 
 import android.app.Application;
 
-import com.example.test.mvvmsampleapp.service.model.Comics;
-import com.example.test.mvvmsampleapp.service.model.Project;
-import com.example.test.mvvmsampleapp.service.repository.ProjectRepository;
-
-import java.util.List;
+import com.example.test.mvvmsampleapp.data.model.Comics;
 
 import javax.inject.Inject;
 

@@ -1,6 +1,6 @@
-package com.example.test.mvvmsampleapp.service.repository;
+package com.example.test.mvvmsampleapp.data.remote.repo;
 
-import com.example.test.mvvmsampleapp.service.model.Project;
+import com.example.test.mvvmsampleapp.data.model.Project;
 
 import java.util.List;
 

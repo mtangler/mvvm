@@ -1,8 +1,8 @@
-package com.example.test.mvvmsampleapp.di;
+package com.example.test.mvvmsampleapp.di.builder;
 
-import com.example.test.mvvmsampleapp.view.ui.ComicsFragment;
-import com.example.test.mvvmsampleapp.view.ui.ProjectFragment;
-import com.example.test.mvvmsampleapp.view.ui.ProjectListFragment;
+import com.example.test.mvvmsampleapp.view.ui.comics.ComicsFragment;
+import com.example.test.mvvmsampleapp.view.ui.projects.ProjectFragment;
+import com.example.test.mvvmsampleapp.view.ui.projects_list.ProjectListFragment;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;

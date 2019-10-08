@@ -1,7 +1,8 @@
 package com.example.test.mvvmsampleapp.view.adapter;
 
-import androidx.databinding.BindingAdapter;
 import android.view.View;
+
+import androidx.databinding.BindingAdapter;
 
 public class CustomBindingAdapter {
     @BindingAdapter("visibleGone")

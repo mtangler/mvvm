@@ -1,15 +1,14 @@
-package com.example.test.mvvmsampleapp.service.repository;
+package com.example.test.mvvmsampleapp.data.remote.repo;
 
-import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
-
-import com.example.test.mvvmsampleapp.service.model.Project;
+import com.example.test.mvvmsampleapp.data.model.Project;
 
 import java.util.List;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;

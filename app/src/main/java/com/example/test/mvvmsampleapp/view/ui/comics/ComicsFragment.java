@@ -1,4 +1,4 @@
-package com.example.test.mvvmsampleapp.view.ui;
+package com.example.test.mvvmsampleapp.view.ui.comics;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -6,24 +6,15 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.test.mvvmsampleapp.R;
+import com.example.test.mvvmsampleapp.data.model.Comics;
 import com.example.test.mvvmsampleapp.databinding.FragmentComicsBinding;
-import com.example.test.mvvmsampleapp.databinding.FragmentProjectListBinding;
-import com.example.test.mvvmsampleapp.di.Injectable;
-import com.example.test.mvvmsampleapp.service.model.Comics;
-import com.example.test.mvvmsampleapp.service.model.Project;
-import com.example.test.mvvmsampleapp.view.adapter.ProjectAdapter;
-import com.example.test.mvvmsampleapp.view.callback.ProjectClickCallback;
-import com.example.test.mvvmsampleapp.viewmodel.ComicsViewModel;
-import com.example.test.mvvmsampleapp.viewmodel.ProjectListViewModel;
-
-import java.util.List;
+import com.example.test.mvvmsampleapp.di.helper.Injectable;
 
 import javax.inject.Inject;
 
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
@@ -61,6 +52,9 @@ public class ComicsFragment extends Fragment implements Injectable {
         observeViewModel(viewModel);
     }
 
+    /**
+     * Observe the data and listen for changes.
+     */
     private void observeViewModel(ComicsViewModel viewModel) {
         // Update the list when the data changes
         viewModel.getObservable().observe(this, new Observer<Comics>() {

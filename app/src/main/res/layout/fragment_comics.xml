@@ -6,7 +6,7 @@
 
         <variable
             name="comics"
-            type="com.example.test.mvvmsampleapp.service.model.Comics" />
+            type="com.example.test.mvvmsampleapp.data.model.Comics" />
     </data>
 
     <LinearLayout
